@@ -1,88 +1,86 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+    --color-princpal: rgb(14, 74, 14);
+    --color-fondo: white;
+    --color-texto: black;
+    --radio:12px;
+    --color-tarjeta: greenyellow;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+ 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0px;
+    padding: 0px;
 }
-
-.encabezado {
-    background-color: #4CAF50;
-    color: white;
+ 
+.encabezado{
+    background-color: var(--color-princpal);
+    color: var(--color-fondo);
     text-align: center;
-    padding: 30px;
+    padding: 40px 16px;
 }
-
-.subtitulo {
-    margin-top: 10px;
+ 
+.encabezado h1{
+    font-size: 2rem;
 }
-
-nav {
-    margin-top: 15px;
+ 
+.subtitulo{
+    opacity: 0.8;
+    margin-bottom: 16px;
 }
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+ 
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
-
-nav a:hover {
-    text-decoration: underline;
+ 
+nav a{
+   color: var(--color-fondo);
+   text-decoration: none;
+   padding: 6px 12px;
+   background-color: rgb(55, 53, 53);
+   border-radius: var(--radio);
+   cursor: pointer;
 }
-
-.tarjeta {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+ 
+nav a:hover{
+    background-color: greenyellow;
+    scale: 1.1;
+    transition: all 0.3s ease-in-out;
 }
-
-.tarjeta h2 {
-    color: #4CAF50;
-    margin-bottom: 10px;
+ 
+.tarjeta{
+    background-color: var(--color-tarjeta);
+    border-radius: var(--radio);
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(12, 12, 12, 0.6);
 }
-
-.tarjeta ol {
-    margin-left: 20px;
-}
-
-.tarjeta li {
+ 
+.tarjeta h2{
+    color: var(--color-princpal);
     margin-bottom: 8px;
 }
-
-.boton {
-    background-color: #4CAF50;
-    color: white;
+ 
+.boton{
+    background-color: var(--color-princpal);
+    color: var(--color-fondo);
     border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 5px;
+    padding: 8px 16px;
+    border-radius: var(--radio);
     cursor: pointer;
 }
-
-.boton:hover {
-    background-color: #45a049;
+ 
+.boton:hover{
+    background-color: rgb(55, 53, 53);
+    scale: 1.1;
+    transition: all 0.3s ease-in-out;
 }
-
-.mensaje {
-    margin-top: 15px;
-    font-weight: bold;
-    color: #4CAF50;
-}
-
-.pie {
-    background-color: #333;
-    color: white;
+ 
+.pie{
+    background-color: var(--color-princpal);
+    color: var(--color-fondo);
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 16px;
 }
