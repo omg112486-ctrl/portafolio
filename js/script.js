@@ -1,10 +1,10 @@
-const boton= document.getElementById("btn-saludo")
-const mensaje= document.getElementById("mensaje")
+document.addEventListener("DOMContentLoaded", () => {
 
-let saludo= 0
+    const boton = document.getElementById("btn-saludo");
+    const mensaje = document.getElementById("mensaje");
 
-function saludar(){
-    saludo++;
-    mensaje.textContent = `gracias por saludar,llevas ${saludo} saludo(s)` 
-}
-boton.addEventListener("click", saludar)
+    boton.addEventListener("click", () => {
+        mensaje.textContent = "¡Hola! Gracias por visitar mi página web.";
+    });
+
+});

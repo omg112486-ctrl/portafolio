@@ -1,63 +1,88 @@
-:root{
-    --color-principal: #656461;
-    --color-fondo: #df8383;
-    --color-texto: #070707;
-    --color-targeta: #4dd59a;
-    --radio: 12px;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--color-fondo);
-     color: var(--color-texto);
-     margin: 0;
-     padding: 0;
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
-.encabezado{
-    color:var(--color-principal);
-    color: var(--color-texto);
+
+.encabezado {
+    background-color: #4CAF50;
+    color: white;
     text-align: center;
-    padding: 40px 16px;
+    padding: 30px;
+}
 
+.subtitulo {
+    margin-top: 10px;
 }
-.encabezado h1{
-    font-size: 2rem;
-    
-}
-.subtitulo{
-    opacity: 0.8;
-    margin-bottom: 16px;
-}
-nav{
-   display: flex;
-   justify-content: center;
-   gap: 16px;
 
-
+nav {
+    margin-top: 15px;
 }
-nav a{
-    color: var(--color-fondo);
+
+nav a {
+    color: white;
     text-decoration: none;
-    padding: 8px 16px;
-    background-color:hsl(0, 58%, 42%);
-    border-radius: 99px;
-
-}
-nav a:hover{
-    background-color: hsl(254, 79%, 49%);
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-.tarjeta{
-    background-color: var(--color-targeta);
-    border-radius: var(--radio);
-    padding: 24px;
-   
-    box-shadow: 0 4px 8px rgba(12, 12, 12, 0.6);
-}
-tarjeta h2{
-    color: var(--color-principal);
-    margin: top 6px; ;
+nav a:hover {
+    text-decoration: underline;
 }
 
+.tarjeta {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
 
+.tarjeta h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.tarjeta ol {
+    margin-left: 20px;
+}
+
+.tarjeta li {
+    margin-bottom: 8px;
+}
+
+.boton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #45a049;
+}
+
+.mensaje {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.pie {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
