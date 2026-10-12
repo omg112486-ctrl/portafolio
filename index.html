@@ -1,58 +1,392 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mi primer sitio web</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Colegio</title>
+
+<link rel="stylesheet" href="colegio.css">
+<script src="colegio.js" defer></script>
+
 </head>
 <body>
-    <header class ="encabezado">
-       <h1>hola soy oscar mauricio y esta es mi pajina web</h1>
-       <p class="subtitulo">este es mi primer sitio web</p>
-       <nav>
-        <a href="#sobre-mi">sobre mi</a>
-        <a href="#habilidades">habilidades</a>
-        <a href="#contacto">contacto</a>
 
- </nav>
-    </header>
+<div class="overlay">
 
-<main>   
-     <section id="sobre-mi" class="targeta">  
-         <h2>Sobre mí</h2>
-        <p>Información sobre mi persona y mis interesesmdasdfjsndfksfashlfasnf HWRFBñjkrfnHRF ñkjwrfbñhrignerkhgberlhgñqekrgbñherbgñkjergbherrgñekjrgbñehgbñejkgqehñ</p>
-     </section>
-     <section id="habilidades" class="targeta">
-        <h2>habilidades</h2>
-        <ol>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>git</li>
-        </ol>
+    <!-- LOGIN -->
 
-        </ul>
-     </section>
-     <section id="contacto" class="targeta">
-        <h2>contacto</h2>
-        <p>preciona el boton para mandar un saludo 
-        <button id="btn-saludo" class="boton">saludar</button>
-        <p id="mensaje" class="mensaje"></p> 
+    <div class="login" id="login">
 
-     </section>
+        <h1>🏫 MI COLEGIO</h1>
 
-</main>
+        <select id="rol">
+            <option value="">Seleccione un rol</option>
+            <option value="director">Director</option>
+            <option value="docente">Docente</option>
+            <option value="padres">Padres</option>
+            <option value="comite">Comité Estudiantil</option>
+        </select>
 
-<footer class="pie">
-    <p>publicado con github</p>
+        <input
+            type="number"
+            id="documento"
+            placeholder="Número de documento">
 
-</footer>
+        <button onclick="ingresar()">
+            INGRESAR
+        </button>
 
+    </div>
 
+    <!-- DIRECTOR -->
 
+    <div id="menuDirector" class="menuPantalla">
 
-    
+        <button onclick="volverInicio()">⬅ Atrás</button>
+
+        <h1 class="tituloMenu">MENÚ DIRECTOR</h1>
+
+        <div class="menu">
+
+            <div class="card">
+                <h3>👨‍🏫 Profesores</h3>
+                <button onclick="abrirModulo('Profesores')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>👨‍🎓 Alumnos</h3>
+                <button onclick="abrirModulo('Alumnos')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>🏆 Comité Estudiantil</h3>
+                <button onclick="abrirModulo('Comité Estudiantil')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>⚖️ Personero</h3>
+                <button onclick="abrirModulo('Personero')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>📢 Avisos Generales</h3>
+                <button onclick="abrirModulo('Avisos')">
+                    Ingresar
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- DOCENTE -->
+
+    <div id="menuDocente" class="menuPantalla">
+
+        <button onclick="volverInicio()">⬅ Atrás</button>
+
+        <h1 class="tituloMenu">MENÚ DOCENTE</h1>
+
+        <div class="menu">
+
+            <div class="card">
+                <h3>👨‍🏫 Profesores</h3>
+                <button onclick="abrirModulo('Profesores')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>👨‍🎓 Alumnos</h3>
+                <button onclick="abrirModulo('Alumnos')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>👪 Padres</h3>
+                <button onclick="abrirModulo('Padres')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>📅 Horarios Atención</h3>
+                <button onclick="abrirModulo('Horarios')">
+                    Ingresar
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PADRES -->
+
+    <div id="menuPadres" class="menuPantalla">
+
+        <button onclick="volverInicio()">⬅ Atrás</button>
+
+        <h1 class="tituloMenu">MENÚ PADRES</h1>
+
+        <div class="menu">
+
+            <div class="card">
+                <h3>📚 Notas</h3>
+                <button onclick="abrirModulo('Notas')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>📊 Calificaciones</h3>
+                <button onclick="abrirModulo('Calificaciones')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>📩 Citaciones</h3>
+                <button onclick="abrirModulo('Citaciones')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>🚌 Salidas Pedagógicas</h3>
+                <button onclick="abrirModulo('Salidas')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>🕐 Solicitar Atención</h3>
+                <button onclick="abrirModulo('Atencion')">
+                    Ingresar
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- COMITÉ -->
+
+    <div id="menuComite" class="menuPantalla">
+
+        <button onclick="volverInicio()">⬅ Atrás</button>
+
+        <h1 class="tituloMenu">
+            COMITÉ ESTUDIANTIL
+        </h1>
+
+        <div class="menu">
+
+            <div class="card">
+                <h3>🎉 Eventos</h3>
+                <button onclick="abrirModulo('Eventos')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>📢 Novedades</h3>
+                <button onclick="abrirModulo('Novedades')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>📌 Cartelera</h3>
+                <button onclick="abrirModulo('Cartelera')">
+                    Ingresar
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>🚌 Salidas Pedagógicas</h3>
+                <button onclick="abrirModulo('Salidas')">
+                    Ingresar
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODULO GENERAL -->
+
+    <div id="modulo" class="menuPantalla">
+
+        <button onclick="cerrarModulo()">
+            ⬅ Volver
+        </button>
+
+        <h1 id="tituloModulo">
+            MÓDULO
+        </h1>
+
+        <div id="contenidoModulo" class="card">
+
+            <img
+                class="fotoAlumno"
+                src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                alt="Alumno">
+
+            <h2>Juan Pérez</h2>
+
+            <p><strong>Edad:</strong> 10 años</p>
+                     <p><strong>Teléfono:</strong> 3000000000</p>
+            <p><strong>Padre:</strong> Pendiente</p>
+            <p><strong>Madre:</strong> Pendiente</p>
+            <p><strong>Acudiente:</strong> Pendiente</p>
+
+            <hr><br>
+
+            <h3>🔍 Buscar Alumno</h3>
+
+            <input
+                type="text"
+                placeholder="Buscar Alumno">
+
+            <button>
+                Buscar
+            </button>
+
+            <br><br>
+
+            <h3>📚 Materias y Calificaciones</h3>
+
+            <input type="number" placeholder="Matemáticas">
+            <input type="number" placeholder="Español">
+            <input type="number" placeholder="Ciencias">
+            <input type="number" placeholder="Inglés">
+            <input type="number" placeholder="Sociales">
+            <input type="number" placeholder="Informática">
+
+            <button>
+                Guardar Notas
+            </button>
+
+            <br><br>
+
+            <h3>📝 Recomendaciones</h3>
+
+            <textarea
+                rows="4"
+                placeholder="Escribir recomendación">
+            </textarea>
+
+            <button>
+                Guardar Recomendación
+            </button>
+
+            <br><br>
+
+            <h3>📩 Citaciones</h3>
+
+            <textarea
+                rows="4"
+                placeholder="Escribir citación">
+            </textarea>
+
+            <button>
+                Guardar Citación
+            </button>
+
+            <br><br>
+
+            <h3>📄 Autorizaciones</h3>
+
+            <textarea
+                rows="4"
+                placeholder="Escribir autorización">
+            </textarea>
+
+            <button>
+                Guardar Autorización
+            </button>
+
+            <br><br>
+
+            <h3>✅ Estado del Alumno</h3>
+
+            <select>
+
+                <option>
+                    Alumno en Clase
+                </option>
+
+                <option>
+                    Alumno Ausente
+                </option>
+
+            </select>
+
+            <button>
+                Guardar Estado
+            </button>
+
+            <br><br>
+
+            <h3>🏠 Entrega del Alumno</h3>
+
+            <input
+                type="text"
+                placeholder="Nombre de quien recibe">
+
+            <input
+                type="time">
+
+            <button>
+                Guardar Entrega
+            </button>
+
+            <br><br>
+
+            <h3>🚌 Salidas Pedagógicas</h3>
+
+            <textarea
+                rows="4"
+                placeholder="Información de la salida">
+            </textarea>
+
+            <button>
+                Guardar Salida
+            </button>
+
+            <br><br>
+
+            <h3>🕐 Solicitar Atención</h3>
+
+            <input
+                type="date">
+
+            <input
+                type="time">
+
+            <textarea
+                rows="4"
+                placeholder="Motivo de la atención">
+            </textarea>
+
+            <button>
+                Solicitar Atención
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
 </body>
 </html>
